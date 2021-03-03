@@ -3,11 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		4830D17EEE3D41D3A5CB2C03 /* Pods_DailyNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 472779F026EDD3F56B83FEDC /* Pods_DailyNews.framework */; };
+		794BF4F325EFFA2400A226C3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794BF4F225EFFA2400A226C3 /* Constants.swift */; };
+		794BF4F725EFFA6800A226C3 /* NetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794BF4F625EFFA6800A226C3 /* NetworkResponse.swift */; };
+		794BF4FB25EFFA9200A226C3 /* EndpointSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794BF4FA25EFFA9200A226C3 /* EndpointSource.swift */; };
+		794BF4FE25EFFAB400A226C3 /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794BF4FD25EFFAB400A226C3 /* HttpMethod.swift */; };
 		79F01ED625EFF692006139A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F01ED525EFF692006139A9 /* AppDelegate.swift */; };
 		79F01ED825EFF692006139A9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F01ED725EFF692006139A9 /* SceneDelegate.swift */; };
 		79F01EDA25EFF692006139A9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F01ED925EFF692006139A9 /* ContentView.swift */; };
@@ -21,6 +25,10 @@
 		090C6C068D14C7B6CF56F681 /* Pods-DailyNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyNews.release.xcconfig"; path = "Target Support Files/Pods-DailyNews/Pods-DailyNews.release.xcconfig"; sourceTree = "<group>"; };
 		37895C55E1CDCCBB4BDF5C41 /* Pods-DailyNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyNews.debug.xcconfig"; path = "Target Support Files/Pods-DailyNews/Pods-DailyNews.debug.xcconfig"; sourceTree = "<group>"; };
 		472779F026EDD3F56B83FEDC /* Pods_DailyNews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DailyNews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		794BF4F225EFFA2400A226C3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		794BF4F625EFFA6800A226C3 /* NetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResponse.swift; sourceTree = "<group>"; };
+		794BF4FA25EFFA9200A226C3 /* EndpointSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointSource.swift; sourceTree = "<group>"; };
+		794BF4FD25EFFAB400A226C3 /* HttpMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
 		79F01ED225EFF692006139A9 /* DailyNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79F01ED525EFF692006139A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79F01ED725EFF692006139A9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +52,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		794BF4F125EFFA1100A226C3 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				794BF4F225EFFA2400A226C3 /* Constants.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		794BF4F525EFFA5100A226C3 /* BaseNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				794BF4F625EFFA6800A226C3 /* NetworkResponse.swift */,
+				794BF4FA25EFFA9200A226C3 /* EndpointSource.swift */,
+				794BF4FD25EFFAB400A226C3 /* HttpMethod.swift */,
+			);
+			path = BaseNetwork;
+			sourceTree = "<group>";
+		};
 		79F01EC925EFF692006139A9 = {
 			isa = PBXGroup;
 			children = (
@@ -65,6 +91,8 @@
 		79F01ED425EFF692006139A9 /* DailyNews */ = {
 			isa = PBXGroup;
 			children = (
+				794BF4F525EFFA5100A226C3 /* BaseNetwork */,
+				794BF4F125EFFA1100A226C3 /* Helpers */,
 				79F01EEA25EFF6AF006139A9 /* Commons */,
 				79F01ED525EFF692006139A9 /* AppDelegate.swift */,
 				79F01ED725EFF692006139A9 /* SceneDelegate.swift */,
@@ -107,7 +135,6 @@
 				37895C55E1CDCCBB4BDF5C41 /* Pods-DailyNews.debug.xcconfig */,
 				090C6C068D14C7B6CF56F681 /* Pods-DailyNews.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -225,10 +252,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				794BF4F325EFFA2400A226C3 /* Constants.swift in Sources */,
 				79F01EED25EFF6E2006139A9 /* EverythingPresentation.swift in Sources */,
 				79F01ED625EFF692006139A9 /* AppDelegate.swift in Sources */,
 				79F01ED825EFF692006139A9 /* SceneDelegate.swift in Sources */,
+				794BF4FE25EFFAB400A226C3 /* HttpMethod.swift in Sources */,
 				79F01EDA25EFF692006139A9 /* ContentView.swift in Sources */,
+				794BF4FB25EFFA9200A226C3 /* EndpointSource.swift in Sources */,
+				794BF4F725EFFA6800A226C3 /* NetworkResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
