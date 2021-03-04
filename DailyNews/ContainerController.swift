@@ -11,7 +11,6 @@ import TinyConstraints
 class ContainerController: UIViewController {
 
     let tabBar = TabBarController()
-    var menuController: SideMenuController!
     private var isMenuHidden = true
 
     override func viewDidLoad() {
@@ -25,18 +24,6 @@ class ContainerController: UIViewController {
         view.addSubview(tabBar.view)
         addChild(tabBar)
         tabBar.didMove(toParent: self)
-    }
-
-    func setupMenuController() {
-        if menuController == nil {
-            menuController = SideMenuController()
-            menuController.sourceDelegate = self
-            addChild(menuController)
-            view.insertSubview(menuController.view, at: 0)
-            menuController.didMove(toParent: self)
-            menuController.view.edgesToSuperview(excluding: .trailing)
-            menuController.view.width(self.tabBar.view.frame.width-165)
-        }
     }
 
     func showMenuController(shouldExpand: Bool) {
@@ -67,10 +54,12 @@ extension ContainerController: SlideMenuDelegate, SourcesViewControllerDelegate 
     }
 
     func configureSlideMenu() {
-        if isMenuHidden {
-            setupMenuController()
-        }
-        isMenuHidden = !isMenuHidden
-        showMenuController(shouldExpand: isMenuHidden)
+        let alert = UIAlertController(title: "Maintenance!", message: "Mohon Maaf , Menu Masih Dalam Tahap Perbaikan. ", preferredStyle: UIAlertController.Style.alert)
+
+                       // add an action (button)
+                       alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+
+                       // show the alert
+                       self.present(alert, animated: true, completion: nil)
     }
 }
