@@ -59,6 +59,7 @@
 		79B4994E25F0A3E40024F1B7 /* SideMenuNewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B4994D25F0A3E40024F1B7 /* SideMenuNewsViewModel.swift */; };
 		79B4995125F0A3FA0024F1B7 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B4995025F0A3FA0024F1B7 /* TabBarController.swift */; };
 		79B4995525F0A4180024F1B7 /* ExpandableCellDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B4995425F0A4180024F1B7 /* ExpandableCellDataSource.swift */; };
+		79B4995925F0A4550024F1B7 /* SideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B4995825F0A4550024F1B7 /* SideMenuController.swift */; };
 		79F01ED625EFF692006139A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F01ED525EFF692006139A9 /* AppDelegate.swift */; };
 		79F01ED825EFF692006139A9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F01ED725EFF692006139A9 /* SceneDelegate.swift */; };
 		79F01EDA25EFF692006139A9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F01ED925EFF692006139A9 /* ContentView.swift */; };
@@ -123,6 +124,7 @@
 		79B4994D25F0A3E40024F1B7 /* SideMenuNewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuNewsViewModel.swift; sourceTree = "<group>"; };
 		79B4995025F0A3FA0024F1B7 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		79B4995425F0A4180024F1B7 /* ExpandableCellDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableCellDataSource.swift; sourceTree = "<group>"; };
+		79B4995825F0A4550024F1B7 /* SideMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuController.swift; sourceTree = "<group>"; };
 		79F01ED225EFF692006139A9 /* DailyNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79F01ED525EFF692006139A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79F01ED725EFF692006139A9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -394,6 +396,7 @@
 			isa = PBXGroup;
 			children = (
 				79B4995425F0A4180024F1B7 /* ExpandableCellDataSource.swift */,
+				79B4995825F0A4550024F1B7 /* SideMenuController.swift */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -610,6 +613,7 @@
 				790D99F725F09C7B00EF3DE8 /* CategoriesViewController.swift in Sources */,
 				790D99D125F0996A00EF3DE8 /* Date+Ext.swift in Sources */,
 				794BF4FE25EFFAB400A226C3 /* HttpMethod.swift in Sources */,
+				79B4995925F0A4550024F1B7 /* SideMenuController.swift in Sources */,
 				790D99CE25F0995100EF3DE8 /* BaseListController.swift in Sources */,
 				790D9A2725F09ED200EF3DE8 /* SportsCategoryController.swift in Sources */,
 				790D9A2425F09EBD00EF3DE8 /* ScienceCategoryController.swift in Sources */,
