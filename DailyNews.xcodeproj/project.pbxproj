@@ -60,6 +60,9 @@
 		79B4995125F0A3FA0024F1B7 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B4995025F0A3FA0024F1B7 /* TabBarController.swift */; };
 		79B4995525F0A4180024F1B7 /* ExpandableCellDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B4995425F0A4180024F1B7 /* ExpandableCellDataSource.swift */; };
 		79B4995925F0A4550024F1B7 /* SideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B4995825F0A4550024F1B7 /* SideMenuController.swift */; };
+		79B4995C25F0A4C50024F1B7 /* SideMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B4995B25F0A4C50024F1B7 /* SideMenuViewModel.swift */; };
+		79B4996025F0A5030024F1B7 /* SideMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B4995F25F0A5030024F1B7 /* SideMenuCell.swift */; };
+		79B4996325F0A5180024F1B7 /* SideMenuSourcesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B4996225F0A5180024F1B7 /* SideMenuSourcesCell.swift */; };
 		79F01ED625EFF692006139A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F01ED525EFF692006139A9 /* AppDelegate.swift */; };
 		79F01ED825EFF692006139A9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F01ED725EFF692006139A9 /* SceneDelegate.swift */; };
 		79F01EDA25EFF692006139A9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F01ED925EFF692006139A9 /* ContentView.swift */; };
@@ -125,6 +128,9 @@
 		79B4995025F0A3FA0024F1B7 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		79B4995425F0A4180024F1B7 /* ExpandableCellDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableCellDataSource.swift; sourceTree = "<group>"; };
 		79B4995825F0A4550024F1B7 /* SideMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuController.swift; sourceTree = "<group>"; };
+		79B4995B25F0A4C50024F1B7 /* SideMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewModel.swift; sourceTree = "<group>"; };
+		79B4995F25F0A5030024F1B7 /* SideMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuCell.swift; sourceTree = "<group>"; };
+		79B4996225F0A5180024F1B7 /* SideMenuSourcesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuSourcesCell.swift; sourceTree = "<group>"; };
 		79F01ED225EFF692006139A9 /* DailyNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79F01ED525EFF692006139A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79F01ED725EFF692006139A9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -375,6 +381,7 @@
 		79B4994425F0A38E0024F1B7 /* SideMenus */ = {
 			isa = PBXGroup;
 			children = (
+				79B4995E25F0A4DA0024F1B7 /* CustomMySide */,
 				79B4995325F0A4060024F1B7 /* Menu */,
 				79B4994525F0A3960024F1B7 /* Side */,
 			);
@@ -397,8 +404,18 @@
 			children = (
 				79B4995425F0A4180024F1B7 /* ExpandableCellDataSource.swift */,
 				79B4995825F0A4550024F1B7 /* SideMenuController.swift */,
+				79B4995B25F0A4C50024F1B7 /* SideMenuViewModel.swift */,
 			);
 			path = Menu;
+			sourceTree = "<group>";
+		};
+		79B4995E25F0A4DA0024F1B7 /* CustomMySide */ = {
+			isa = PBXGroup;
+			children = (
+				79B4995F25F0A5030024F1B7 /* SideMenuCell.swift */,
+				79B4996225F0A5180024F1B7 /* SideMenuSourcesCell.swift */,
+			);
+			path = CustomMySide;
 			sourceTree = "<group>";
 		};
 		79F01EC925EFF692006139A9 = {
@@ -589,12 +606,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				790D9A2F25F09F2C00EF3DE8 /* CategoriesCell.swift in Sources */,
+				79B4996325F0A5180024F1B7 /* SideMenuSourcesCell.swift in Sources */,
 				794BF50925EFFC0800A226C3 /* SRequest.swift in Sources */,
 				794BF4F325EFFA2400A226C3 /* Constants.swift in Sources */,
 				79B4995125F0A3FA0024F1B7 /* TabBarController.swift in Sources */,
 				790D99CB25F098CD00EF3DE8 /* TopHeadlinePresentation.swift in Sources */,
 				790D99DF25F099DF00EF3DE8 /* RxHelper.swift in Sources */,
 				79F01EED25EFF6E2006139A9 /* EverythingPresentation.swift in Sources */,
+				79B4995C25F0A4C50024F1B7 /* SideMenuViewModel.swift in Sources */,
 				794BF51125EFFCD000A226C3 /* Sources.swift in Sources */,
 				790D9A0625F09DA900EF3DE8 /* SectionHeaderCell.swift in Sources */,
 				790D9A2A25F09EEB00EF3DE8 /* TechnologyCategoryController.swift in Sources */,
@@ -630,6 +649,7 @@
 				790D99D925F099AF00EF3DE8 /* Extensions.swift in Sources */,
 				794BF4FB25EFFA9200A226C3 /* EndpointSource.swift in Sources */,
 				794BF50125EFFB8200A226C3 /* NewsApi.swift in Sources */,
+				79B4996025F0A5030024F1B7 /* SideMenuCell.swift in Sources */,
 				79B4995525F0A4180024F1B7 /* ExpandableCellDataSource.swift in Sources */,
 				79B4993425F0A2F20024F1B7 /* NewsCell.swift in Sources */,
 				790D9A0A25F09DD200EF3DE8 /* SectionsViewModel.swift in Sources */,
