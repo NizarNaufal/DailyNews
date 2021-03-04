@@ -19,15 +19,15 @@ extension NewsAPI: APISetting {
     var path: String {
         switch self {
         case .fetch(_):
-            return EndPointType.everything.rawValue
+            return EndpointSource.everything.rawValue
         case .fetchDataForSearchController(_, _):
-            return EndPointType.everything.rawValue
+            return EndpointSource.everything.rawValue
         case .fetchNewsWithSources(_, _):
-            return EndPointType.everything.rawValue
+            return EndpointSource.everything.rawValue
         case .fetchTHNews(_, _):
-            return EndPointType.topHeadline.rawValue
+            return EndpointSource.topHeadline.rawValue
         case .fetchSources(_):
-            return EndPointType.sources.rawValue
+            return EndpointSource.sources.rawValue
             
         }
     }
